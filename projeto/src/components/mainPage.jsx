@@ -7,7 +7,7 @@ import Cartoes from './cartoes'
 import { MyResponsivePie } from './graficoPie'
 
 
-const res = [
+/* const res = [
     {
         nome: "Rafael",
         distrito: "Lisboa",
@@ -70,7 +70,7 @@ const res = [
         total: 1234,
         data: "12/05",
         cor: true
-    },]
+    },] */
 
 export default function HomePage(){
 
@@ -79,7 +79,7 @@ export default function HomePage(){
     
     const getRes = async () => {
         let resposta = await fazPedido("/api/", "GET")
-        setState([resposta.body])
+        setState(resposta.body)
     }
 
    useEffect (() => {
@@ -122,11 +122,11 @@ export default function HomePage(){
 
             <div className={styles.searchContainer}>
                 <input type="text" name="search" placeholder="Search..." className={styles.searchInput}/>
-                <button>Adicionar novo</button>
+                <button onClick={() => router.push("./addConduminio")}>Adicionar novo</button>
             </div>
 
             <div className={styles.conduminios}>
-            {state.map(r => <Cartoes nome={r.body.nome} distrito={r.body.distrito} total={r.body.total} data={r.body.data} cor={r.body.cor}/>)}
+            {state.map(r => <Cartoes nome={r.nome} distrito={r.distrito} total={r.total} data={r.data} cor={r.cor}/>)}
             </div>
             
             

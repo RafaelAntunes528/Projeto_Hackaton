@@ -1,8 +1,11 @@
+import { useRouter } from "next/router";
 import { useState } from "react"
 import styles from "../../styles/popUpCriarCon.module.css"
 import { fazPedido } from "../utils/rest";
 
 export default function PopUpCriarCon(){
+
+    const router = useRouter()
 
     const [nome, setName] = useState("")
     const [distrito, setDistrito] = useState("")
@@ -23,7 +26,7 @@ export default function PopUpCriarCon(){
         const a = await fazPedido("/api/condominios/", "POST", info)
         console.log(a)
         if (a.status === 200)
-            router.push("/HomePage") 
+            router.push("/mainPage") 
     })
 
 
