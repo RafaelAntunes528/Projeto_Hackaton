@@ -10,11 +10,7 @@ import Morador from '../src/components/morador'
 export default function Home() {
   return (
     <div className={styles.container}>
-<<<<<<< HEAD
       <CartõesPagina></CartõesPagina>
-=======
-    <Morador></Morador>
->>>>>>> ec24c859daf88f6303aab1928504238603d2346e
     </div>
   )
 }

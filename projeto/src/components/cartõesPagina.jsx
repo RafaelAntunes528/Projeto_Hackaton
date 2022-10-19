@@ -1,7 +1,29 @@
 import styles from '../../styles/cartõesPagina.module.css'
 import Cartões from './cartões'
 import { MyResponsivePie } from './graficoPie'
+import Morador from './morador'
 import Tabela, { MyResponsiveCalendar } from './Tabela'
+
+
+const resposta=[
+    {
+        nome: "Rafael",
+        casa: "RC/D",
+        estado: false,
+    },
+    {
+        nome: "António",
+        casa: "lixo3",
+        estado: true,
+    },
+    {
+        nome: "Vasco",
+        casa: "Mansão do Ronaldo",
+        estado: true,
+    },
+
+]
+
 export default function CartõesPagina(morador){
     return(
         <div className={styles.main}>
@@ -26,6 +48,7 @@ export default function CartõesPagina(morador){
             </div>
             <div className={styles.moradores}>
                 <div className={styles.moradores1}>
+                {resposta.map(r => <Morador nomeDaPessoa={r.nome} andar={r.casa} isPago={r.estado}/>)}
                 </div>
             </div>
         </div>
