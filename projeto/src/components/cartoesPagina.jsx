@@ -1,5 +1,5 @@
-import styles from '../../styles/cartõesPagina.module.css'
-import Cartões from './cartões'
+import styles from '../../styles/cartoesPagina.module.css'
+import Cartoes from './cartoes'
 import { MyResponsivePie } from './graficoPie'
 import Morador from './morador'
 import Tabela, { MyResponsiveCalendar } from './Tabela'
@@ -24,7 +24,7 @@ const resposta=[
 
 ]
 
-export default function CartõesPagina(morador){
+export default function CartoesPagina(moradores){
     return(
         <div className={styles.main}>
             <div className={styles.graph}>

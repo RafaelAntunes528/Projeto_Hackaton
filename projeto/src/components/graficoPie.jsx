@@ -4,7 +4,7 @@ export const MyResponsivePie = ({ data /* see data tab */ }) => (
     <ResponsivePie
         data={data}
         
-        margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
+        margin={{ top: 50, right: 160, bottom: 50, left: 60 }}
         innerRadius={0}
         padAngle={0.7}
         cornerRadius={3}
@@ -25,18 +25,14 @@ export const MyResponsivePie = ({ data /* see data tab */ }) => (
                 ]
             ]
         }}
+        arcLinkLabel={d => `${d.id}: ${d.value}`}
         arcLinkLabelsSkipAngle={10}
         arcLinkLabelsTextColor="#333333"
-        arcLabelsSkipAngle={10}
         arcLabelsTextColor={{
             from: 'color',
-            modifiers: [
-                [
-                    'darker',
-                    2
-                ]
-            ]
+            modifiers: [['brighter', 20]]
         }}
+        arcLabelsSkipAngle={10}
         arcLinkLabelsOffset={2}
         arcLinkLabelsColor={{ from: 'color' }}
         arcLinkLabelsThickness={3}
