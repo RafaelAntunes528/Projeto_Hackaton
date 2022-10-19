@@ -11,7 +11,9 @@ import PopUpCriarCon from '../src/components/popUpCriarCon'
 export default function Home() {
   return (
     <div className={styles.container}>
+
       <PopUpCriarCon></PopUpCriarCon>
+
     </div>
   )
 }

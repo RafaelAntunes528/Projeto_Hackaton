@@ -1,0 +1,8 @@
+.caixaMain {
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    background-color: #38b6ff;
+    justify-content: space-around;
+
+}
