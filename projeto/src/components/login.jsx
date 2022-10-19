@@ -1,17 +1,28 @@
+import { useRouter } from "next/router"
 import styles from "../../styles/login.module.css"
 
+
 export default function Login(){
-    return (
+    const router = useRouter()
+
+    return ( 
+        <div>
+    <div className={styles.banner}></div>
         <div className={styles.main}>
+           
+                <div className={styles.logo}></div>
+            
+            
             <div className={styles.divMeio}>
-                <label for="email">Email</label>             
+                <label htmlFor="email">E-mail</label>
                 <input type="email"></input>
-                <label for="email">Password</label>   
+                <label htmlFor="email">Password</label>   
                 <input type="password"></input>
                 <div className={styles.login}>
-                <button className={styles.login1}>Login</button>
+                <button onClick={() => router.push("./mainPage")} className={styles.login1}>Fazer Login</button>
                 </div>
 </div>
+ </div>
  </div>
     )
 }
