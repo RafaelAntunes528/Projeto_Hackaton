@@ -1,10 +1,13 @@
+import { resolveHref } from 'next/dist/shared/lib/router/router'
 import { useRouter } from 'next/router'
-import { useState } from 'react'
+import { startTransition, useEffect, useState } from 'react'
 import styles from '../../styles/MainPage.module.css'
 import { fazPedido } from '../utils/rest'
 import Cartoes from './cartoes'
 import { MyResponsivePie } from './graficoPie'
-const resposta = [
+
+
+const res = [
     {
         nome: "Rafael",
         distrito: "Lisboa",
@@ -67,34 +70,25 @@ const resposta = [
         total: 1234,
         data: "12/05",
         cor: true
-    },
-    {
-        nome: "Rafael",
-        distrito: "Lisboa",
-        total: 1234,
-        data: "12/05",
-        cor: true
-    },
-    {
-        nome: "Rafael",
-        distrito: "Lisboa",
-        total: 1234,
-        data: "12/05",
-        cor: true
-    },
-    {
-        nome: "Rafael",
-        distrito: "Lisboa",
-        total: 1234,
-        data: "12/05",
-        cor: true
-    },
-]
+    },]
+
 export default function HomePage(){
-    const [state, setState] = useState(resposta)
+
     //dentro de um useEffect
     // let resposta = fazPedido("/api/", "GET")
+    
+    
+    
+    useEffect (() => {
+        return resposta = fazPedido("/api/", "GET")
+    })
 
+    let resposta = useEffect()
+    console.log(resposta)
+    
+    const [state, setState] = useState(resposta)
+
+      
     const router = useRouter()
     return(
         <div className={styles.main}>

@@ -9,13 +9,9 @@ import PopUpCriarCon from '../src/components/popUpCriarCon'
 export default function Home() {
   return (
     <div className={styles.container}>
-<<<<<<< HEAD
-      <HomePage></HomePage>
-=======
 
-      <PopUpCriarCon></PopUpCriarCon>
+      <HomePage/>
 
->>>>>>> cfe34c2898201b3776efa37ddde8d7c6e02407ce
     </div>
   )
 }

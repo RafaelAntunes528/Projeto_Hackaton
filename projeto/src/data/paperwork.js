@@ -24,7 +24,7 @@ async function getMoradores(id) {
         return await collection.findOne({ _id: new ObjectId(id)})
 }
 async function getAllCondominio() {
-        const collection = await getMongoCollection(DB_NAME, MOR)
+        const collection = await getMongoCollection(DB_NAME, CON)
         return await collection.find().toArray()
 }
 

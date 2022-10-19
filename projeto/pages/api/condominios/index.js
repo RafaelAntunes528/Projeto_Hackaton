@@ -1,4 +1,4 @@
-import { insertCondominio } from "../../src/data/paperwork"
+import { insertCondominio } from "../../../src/data/paperwork"
 
 export default async function handler(req, res) {
     console.log("Recebi")
