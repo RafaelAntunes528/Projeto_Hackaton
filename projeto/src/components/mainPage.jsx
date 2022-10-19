@@ -34,7 +34,6 @@ export default function HomePage(){
             </div>
 
             <div className={styles.conduminios}>
-<<<<<<< HEAD
             <Cartões nome={"António"} total={"fer"} data={"vvf"}></Cartões>
             <Cartões nome={"Rafael"} total={"12749"} data={"vvf"}></Cartões>
             <Cartões nome={"Vasco"} total={"6876"} data={"vvf"}></Cartões>
@@ -43,11 +42,6 @@ export default function HomePage(){
             <Cartões nome={"Mónica"} total={"fer"} data={"vvf"}></Cartões>
             <Cartões nome={"António"} total={"12749"} data={"vvf"}></Cartões>
             <Cartões nome={"Rafael"} total={"6876"} data={"vvf"}></Cartões>
-=======
-            <Cartões nome={"Rafael"} total={12456} data={"12/05"}></Cartões>
-            <Cartões nome={"man"} total={"12749"} data={"vvf"}></Cartões>
-            <Cartões nome={"man"} total={"6876"} data={"vvf"}></Cartões>
->>>>>>> b2a51fe40c8891f593830b70ff2e1d7f5abd06e5
             </div>
             
 

@@ -3,6 +3,8 @@ import { useRouter } from "next/router"
 
 export default function Cartões({ nome, total, data }) {
     const router = useRouter()
+
+    if()
     
 
 
