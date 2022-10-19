@@ -9,7 +9,9 @@ export default function Cartões({ nome, total, data }) {
 
     return (
         <div onClick={() => router.push("/cartõesPagina")} className={styles.cartao1}>
+            <h1>Nome:</h1>
             <p>{nome}</p>
+            
             <p>{total}</p>
             <p>{data}</p>
         </div>
