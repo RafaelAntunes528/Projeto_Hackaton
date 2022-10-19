@@ -7,9 +7,12 @@ export default function Morador({nomeDaPessoa, andar, isPago}){
         <div>
 
         <div className={styles.caixaMain}>
-          <h4>nome: {nomeDaPessoa} </h4>
-          <h4>casa: {andar} </h4> 
-          {isPago == true ? <h4>estado: Pago </h4>:<h4>estado: Não Pago </h4>}  
+          <div className={styles.logo}></div>
+          <div className={styles.nomes}>
+          <h4>Nome: {nomeDaPessoa} </h4>
+          <h4>Casa: {andar} </h4> 
+          {isPago == true ? <h4>Estado: Pago </h4>:<h4>Estado: Não Pago </h4>}  
+    </div>
     </div>
     </div>
     )

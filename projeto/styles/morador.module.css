@@ -1,8 +1,35 @@
 .caixaMain {
-    height: 10vh;
-    width: 100vw;
+    height: 15vh;
+    width: 98vw;
     display: flex;
-    background-color: #38b6ff;
-    justify-content: space-around;
+    background-color: #3c3f57;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1vh;
+    color: white;
+    border-radius: 10px;
+    margin-left: 1vw;
+    box-shadow: 50px;
+    border: thick double #38b6ff;
+    box-shadow: 5px 5px 5px black;
+    
+    
 
+}
+.nomes{
+    background-color: #3c3f57;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 10vw;
+}
+.logo{
+    width: 25vw;
+    background-image: url("../src/components/imagens/Logo.png");
+    background-repeat: no-repeat, repeat;
+    background-position: flex-start;
+    background-size: 20vh;
+    height: 15vh;
 }
