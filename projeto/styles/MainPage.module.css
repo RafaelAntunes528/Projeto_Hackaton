@@ -6,16 +6,22 @@
 }
 .graph{
     background-color: #90d6ff;
-    height: 40vh;
+    height: 50vh;
     width: 100vw;
     display: flex;
     align-items: baseline;
 }
 .conduminios{
     background-color: white;
-    height: 60vh;
-    width: 100vw;
     display: flex;
-    flex-direction: row;
     justify-content: center;
+}
+
+.searchContainer{
+    justify-content: center;
+    display: flex;
+    padding-top: 15px;
+}
+.searchContainer input{
+    width: 500px;
 }

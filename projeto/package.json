@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nivo/calendar": "^0.80.0",
     "@nivo/line": "^0.80.0",
     "@nivo/pie": "^0.80.0",
     "mongodb": "^4.10.0",
