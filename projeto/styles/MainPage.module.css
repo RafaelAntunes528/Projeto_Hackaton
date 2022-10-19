@@ -15,6 +15,9 @@
     background-color: white;
     display: flex;
     justify-content: center;
+    margin-left:42vh;
+    flex-wrap: wrap;
+    max-width: 60vw;
 }
 
 .searchContainer{

@@ -1,10 +1,70 @@
+import { useState } from 'react'
 import styles from '../../styles/MainPage.module.css'
 import { fazPedido } from '../utils/rest'
 import Cartões from './cartões'
 import { MyResponsivePie } from './graficoPie'
+const resposta = [
+    {
+        nome: "Rafael",
+        distrito: "Lisboa",
+        total: 1234,
+        data: "12/05",
+        cor: true
+    },
+    {
+        nome: "Rafael",
+        distrito: "Lisboa",
+        total: 1234,
+        data: "12/05",
+        cor: true
+    },
+    {
+        nome: "Rafael",
+        distrito: "Lisboa",
+        total: 1234,
+        data: "12/05",
+        cor: true
+    },
+    {
+        nome: "Rafael",
+        distrito: "Lisboa",
+        total: 1234,
+        data: "12/05",
+        cor: true
+    },
+    {
+        nome: "Rafael",
+        distrito: "Lisboa",
+        total: 1234,
+        data: "12/05",
+        cor: true
+    },
+    {
+        nome: "Rafael",
+        distrito: "Lisboa",
+        total: 1234,
+        data: "12/05",
+        cor: true
+    },
+    {
+        nome: "Rafael",
+        distrito: "Lisboa",
+        total: 1234,
+        data: "12/05",
+        cor: true
+    },
+    {
+        nome: "Rafael",
+        distrito: "Lisboa",
+        total: 1234,
+        data: "12/05",
+        cor: true
+    },
+]
 export default function HomePage(){
-
-    let resposta = fazPedido("/api/", "GET")
+    const [state, setState] = useState(resposta)
+    //dentro de um useEffect
+    // let resposta = fazPedido("/api/", "GET")
 
     return(
         <div className={styles.main}>
@@ -28,11 +88,11 @@ export default function HomePage(){
 
             <div className={styles.searchContainer}>
                 <input type="text" name="search" placeholder="Search..." className={styles.searchInput}/>
-
+                <button>Adicionar novo</button>
             </div>
 
             <div className={styles.conduminios}>
-            <Cartões nome={resposta.nome} distrito={resposta.distrito} total={resposta.total} data={resposta.data} cor={resposta.true}></Cartões>
+            {resposta.map(r => <Cartões nome={r.nome} distrito={r.distrito} total={r.total} data={r.data} cor={r.cor}/>)}
             </div>
             
             
