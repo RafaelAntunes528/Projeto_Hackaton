@@ -8,4 +8,8 @@
     margin-top: 2vh;
 
 }
+.info{
+    display: flex;
+    flex-direction: row;
+}
 

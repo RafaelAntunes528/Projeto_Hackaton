@@ -1,4 +1,5 @@
 import styles from '../../styles/MainPage.module.css'
+import Cartões from './cartões'
 import { MyResponsivePie } from './graficoPie'
 import { MyResponsiveLine } from './Tabela'
 export default function HomePage(){
@@ -46,7 +47,19 @@ export default function HomePage(){
 }></MyResponsiveLine> */}
             </div>
             <div className={styles.conduminios}>
-
+            <Cartões nome={"Rafael"} total={12456} data={"12/05"}></Cartões>
+            <Cartões nome={"man"} total={"12749"} data={"vvf"}></Cartões>
+            <Cartões nome={"man"} total={"6876"} data={"vvf"}></Cartões>
+            </div>
+            <div className={styles.conduminios}>
+            <Cartões nome={"man"} total={"fer"} data={"vvf"}></Cartões>
+            <Cartões nome={"man"} total={"12749"} data={"vvf"}></Cartões>
+            <Cartões nome={"man"} total={"6876"} data={"vvf"}></Cartões>
+            </div>
+            <div className={styles.conduminios}>
+            <Cartões nome={"man"} total={"fer"} data={"vvf"}></Cartões>
+            <Cartões nome={"man"} total={"12749"} data={"vvf"}></Cartões>
+            <Cartões nome={"man"} total={"6876"} data={"vvf"}></Cartões>
             </div>
 
         </div>
