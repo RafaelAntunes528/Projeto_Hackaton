@@ -1,7 +1,7 @@
 import styles from '../../styles/MainPage.module.css'
 import Cartões from './cartões'
 import { MyResponsivePie } from './graficoPie'
-import { MyResponsiveLine } from './Tabela'
+import Tabela, { MyResponsiveCalendar } from './Tabela'
 export default function HomePage(){
     return(
         <div className={styles.main}>
@@ -20,38 +20,21 @@ export default function HomePage(){
                 "color": "hsl(249, 68%, 52%)"
                 }
                 ]}></MyResponsivePie>
-                
-                {/* <MyResponsiveLine data={[
-  {
-    "id": "japan",
-    "color": "hsl(201, 100%, 61%)",
-    "data": [
-      {
-        "x": 1,
-        "y": 0
-      },
-      {
-        "x": 10,
-        "y": 700
-      },
-      {
-        "x": 20,
-        "y": 1500
-      },
-      {
-        "x": 33,
-        "y": 2500
-      },
-    ]
-  }]
-}></MyResponsiveLine> */}
             </div>
+
+
+            <div className={styles.searchContainer}>
+                <input type="text" name="search" placeholder="Search..." className={styles.searchInput}/>
+            </div>
+
             <div className={styles.conduminios}>
             <Cartões nome={"Rafael"} total={150} data={"12/05"}></Cartões>
             <Cartões nome={"Vasco"} total={"12749"} data={"vvf"}></Cartões>
             <Cartões nome={"Mónica"} total={"6876"} data={"vvf"}></Cartões>
             </div>
+
             <div className={styles.conduminios}>
+<<<<<<< HEAD
             <Cartões nome={"António"} total={"fer"} data={"vvf"}></Cartões>
             <Cartões nome={"Rafael"} total={"12749"} data={"vvf"}></Cartões>
             <Cartões nome={"Vasco"} total={"6876"} data={"vvf"}></Cartões>
@@ -60,7 +43,13 @@ export default function HomePage(){
             <Cartões nome={"Mónica"} total={"fer"} data={"vvf"}></Cartões>
             <Cartões nome={"António"} total={"12749"} data={"vvf"}></Cartões>
             <Cartões nome={"Rafael"} total={"6876"} data={"vvf"}></Cartões>
+=======
+            <Cartões nome={"Rafael"} total={12456} data={"12/05"}></Cartões>
+            <Cartões nome={"man"} total={"12749"} data={"vvf"}></Cartões>
+            <Cartões nome={"man"} total={"6876"} data={"vvf"}></Cartões>
+>>>>>>> b2a51fe40c8891f593830b70ff2e1d7f5abd06e5
             </div>
+            
 
         </div>
     )
