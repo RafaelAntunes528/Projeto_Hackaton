@@ -77,16 +77,19 @@ export default function HomePage(){
     //dentro de um useEffect
     // let resposta = fazPedido("/api/", "GET")
     
-    
-    
-    useEffect (() => {
-        return resposta = fazPedido("/api/", "GET")
-    })
+    const getRes = async () => {
+        let resposta = await fazPedido("/api/", "GET")
+        setState([resposta.body])
+    }
 
-    let resposta = useEffect()
-    console.log(resposta)
+   useEffect (() => {
+       getRes()
+    }, []) 
+
     
-    const [state, setState] = useState(resposta)
+    const [state, setState] = useState(Array)
+
+    console.log(state)
 
       
     const router = useRouter()
@@ -123,7 +126,7 @@ export default function HomePage(){
             </div>
 
             <div className={styles.conduminios}>
-            {resposta.map(r => <Cartoes nome={r.nome} distrito={r.distrito} total={r.total} data={r.data} cor={r.cor}/>)}
+            {state.map(r => <Cartoes nome={r.body.nome} distrito={r.body.distrito} total={r.body.total} data={r.body.data} cor={r.body.cor}/>)}
             </div>
             
             
