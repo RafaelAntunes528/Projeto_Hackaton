@@ -1,12 +1,23 @@
 import styles from "../../styles/cartões.module.css"
 import { useRouter } from "next/router"
 
+<<<<<<< HEAD
 export default function Cartões({ nome, total, data, cor }) {
     const router = useRouter()
 
+=======
+export default function Cartões({ nome, total, distrito, data, cor }) {
+    const router = useRouter()
+
+    let isBackgroundRed = cor
+
+>>>>>>> ec24c859daf88f6303aab1928504238603d2346e
     return (
-        <div onClick={() => router.push("/cartõesPagina")} className={styles.cartao1}>
+        <div style={{
+            backgroundColor: isBackgroundRed ? '#38b6ff' : 'red',
+          }} onClick={() => router.push("/cartõesPagina")} className={styles.cartao1}>
             <p className={styles.nome}>Nome: {nome}</p>
+            <p className={styles.nome}>Distrito: {distrito}</p>
             <p className={styles.total}>Total receber: {total}</p>         
             <p className={styles.data}>Data: {data}</p> 
         </div>

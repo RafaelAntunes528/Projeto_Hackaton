@@ -23,10 +23,15 @@ async function getMoradores(id) {
     const collection = await getMongoCollection(DB_NAME, MOR);
         return await collection.findOne({ _id: new ObjectId(id)})
 }
+async function getAllCondominio() {
+        const collection = await getMongoCollection(DB_NAME, MOR)
+        return await collection.find().toArray()
+}
 
 // Exportamos as duas funções criadas acima
 export {
     insertCondominio,
     getCondominio,
     getMoradores,
+    getAllCondominio,
 }

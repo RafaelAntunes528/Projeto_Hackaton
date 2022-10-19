@@ -1,8 +1,71 @@
+import { useState } from 'react'
 import styles from '../../styles/MainPage.module.css'
+import { fazPedido } from '../utils/rest'
 import Cartões from './cartões'
 import { MyResponsivePie } from './graficoPie'
-import Tabela, { MyResponsiveCalendar } from './Tabela'
+const resposta = [
+    {
+        nome: "Rafael",
+        distrito: "Lisboa",
+        total: 1234,
+        data: "12/05",
+        cor: true
+    },
+    {
+        nome: "Rafael",
+        distrito: "Lisboa",
+        total: 1234,
+        data: "12/05",
+        cor: true
+    },
+    {
+        nome: "Rafael",
+        distrito: "Lisboa",
+        total: 1234,
+        data: "12/05",
+        cor: true
+    },
+    {
+        nome: "Rafael",
+        distrito: "Lisboa",
+        total: 1234,
+        data: "12/05",
+        cor: true
+    },
+    {
+        nome: "Rafael",
+        distrito: "Lisboa",
+        total: 1234,
+        data: "12/05",
+        cor: true
+    },
+    {
+        nome: "Rafael",
+        distrito: "Lisboa",
+        total: 1234,
+        data: "12/05",
+        cor: true
+    },
+    {
+        nome: "Rafael",
+        distrito: "Lisboa",
+        total: 1234,
+        data: "12/05",
+        cor: true
+    },
+    {
+        nome: "Rafael",
+        distrito: "Lisboa",
+        total: 1234,
+        data: "12/05",
+        cor: true
+    },
+]
 export default function HomePage(){
+    const [state, setState] = useState(resposta)
+    //dentro de um useEffect
+    // let resposta = fazPedido("/api/", "GET")
+
     return(
         <div className={styles.main}>
             <div className={styles.graph}>
@@ -19,30 +82,19 @@ export default function HomePage(){
                 "value": 1000,
                 "color": "hsl(249, 68%, 52%)"
                 }
-                ]}></MyResponsivePie>
+                ]}/>
             </div>
 
 
             <div className={styles.searchContainer}>
                 <input type="text" name="search" placeholder="Search..." className={styles.searchInput}/>
+                <button>Adicionar novo</button>
             </div>
 
             <div className={styles.conduminios}>
-            <Cartões nome={"Rafael"} total={150} data={"12/05"}></Cartões>
-            <Cartões nome={"Vasco"} total={"12749"} data={"vvf"}></Cartões>
-            <Cartões nome={"Mónica"} total={"6876"} data={"vvf"}></Cartões>
+            {resposta.map(r => <Cartões nome={r.nome} distrito={r.distrito} total={r.total} data={r.data} cor={r.cor}/>)}
             </div>
-
-            <div className={styles.conduminios}>
-            <Cartões nome={"António"} total={"fer"} data={"vvf"}></Cartões>
-            <Cartões nome={"Rafael"} total={"12749"} data={"vvf"}></Cartões>
-            <Cartões nome={"Vasco"} total={"6876"} data={"vvf"}></Cartões>
-            </div>
-            <div className={styles.conduminios}>
-            <Cartões nome={"Mónica"} total={"fer"} data={"vvf"}></Cartões>
-            <Cartões nome={"António"} total={"12749"} data={"vvf"}></Cartões>
-            <Cartões nome={"Rafael"} total={"6876"} data={"vvf"}></Cartões>
-            </div>
+            
             
 
         </div>
