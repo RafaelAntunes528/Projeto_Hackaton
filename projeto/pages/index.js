@@ -9,7 +9,7 @@ import HomePage from '../src/components/mainPage'
 export default function Home() {
   return (
     <div className={styles.container}>
-      <HomePage></HomePage>
+      <CartõesPagina></CartõesPagina>
     </div>
   )
 }
