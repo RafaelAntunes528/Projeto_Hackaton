@@ -1,10 +1,8 @@
 import styles from "../../styles/cartões.module.css"
 import { useRouter } from "next/router"
 
-export default function Cartões({ nome, total, distrito, data, cor }) {
+export default function Cartões({ nome, total, data, cor }) {
     const router = useRouter()
-
-    let isBackgroundRed = cor
 
     return (
         <div style={{
@@ -13,8 +11,7 @@ export default function Cartões({ nome, total, distrito, data, cor }) {
             <p className={styles.nome}>Nome: {nome}</p>
             <p className={styles.nome}>Distrito: {distrito}</p>
             <p className={styles.total}>Total receber: {total}</p>         
-            <p className={styles.data}>Data: {data}</p>
-            
+            <p className={styles.data}>Data: {data}</p> 
         </div>
     )
 }

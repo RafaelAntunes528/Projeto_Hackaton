@@ -5,11 +5,16 @@ import CartõesPagina from '../src/components/cartõesPagina'
 import Login from '../src/components/login'
 import styles from '../styles/Home.module.css'
 import HomePage from '../src/components/mainPage'
+import Morador from '../src/components/morador'
 
 export default function Home() {
   return (
     <div className={styles.container}>
-      <HomePage></HomePage>
+<<<<<<< HEAD
+      <CartõesPagina></CartõesPagina>
+=======
+    <Morador></Morador>
+>>>>>>> ec24c859daf88f6303aab1928504238603d2346e
     </div>
   )
 }
