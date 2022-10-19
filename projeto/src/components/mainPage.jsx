@@ -60,6 +60,34 @@ const resposta = [
         data: "12/05",
         cor: true
     },
+    {
+        nome: "Rafael",
+        distrito: "Lisboa",
+        total: 1234,
+        data: "12/05",
+        cor: true
+    },
+    {
+        nome: "Rafael",
+        distrito: "Lisboa",
+        total: 1234,
+        data: "12/05",
+        cor: true
+    },
+    {
+        nome: "Rafael",
+        distrito: "Lisboa",
+        total: 1234,
+        data: "12/05",
+        cor: true
+    },
+    {
+        nome: "Rafael",
+        distrito: "Lisboa",
+        total: 1234,
+        data: "12/05",
+        cor: true
+    },
 ]
 export default function HomePage(){
     const [state, setState] = useState(resposta)
