@@ -9,9 +9,7 @@ import PopUpCriarCon from '../src/components/popUpCriarCon'
 export default function Home() {
   return (
     <div className={styles.container}>
-
-      <Login></Login>
-
+     <Login></Login>
     </div>
   )
 }

@@ -1,27 +1,29 @@
 .main{
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     background-color: rgb(255, 255, 255);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+
 }
 
 .divMeio {
     width: 20vw;
     height: 55vh;
-    background-color: #38b6ff;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content:center ;
+    margin-bottom: 20vh;
 }
 .login{
     
     height: 10vh;
     width: 10vw;
-    background-color: #38b6ff;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,12 +31,37 @@
 }
 
 .login1 {
+    color: white;
+    background-color: #38b6ff;
     border: transparent;
     cursor: pointer;
-    border-radius: 20px;
-    height: 5vh;
-    width: 5vw;
+    
+    height:4vh;
+    width: 7vw;
 }
-.image {
-    background: url("../src/components/imagens/Logo.png");
+
+
+.banner {
+    background-image: url("../src/components/imagens/Captura_de_ecra_2022-10-19_as_21.01.46.png");
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 20vh;
+}
+
+.logo{
+    
+    background-image: url("../src/components/imagens/Logo.png");
+    background-position: center;
+    
+    background-size: cover;
+    height: 29vh;
+    width: 20vw;
+    margin-bottom: 20vh;
+}
+.label{
+    left: 0%;
 }
