@@ -5,15 +5,13 @@ import CartõesPagina from '../src/components/cartõesPagina'
 import Login from '../src/components/login'
 import styles from '../styles/Home.module.css'
 import HomePage from '../src/components/mainPage'
+import PopUpCriarCon from '../src/components/popUpCriarCon'
+
 
 export default function Home() {
   return (
     <div className={styles.container}>
-<<<<<<< HEAD
-      <Cartões nome={"man"} total={"fer"} data={"vvf"}></Cartões>
-=======
-      <HomePage></HomePage>
->>>>>>> 55c0b57d761dff4845c9406155b276b50d6d1272
+      <PopUpCriarCon></PopUpCriarCon>
     </div>
   )
 }
