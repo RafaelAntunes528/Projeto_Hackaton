@@ -1,12 +1,16 @@
 import styles from "../../styles/login.module.css"
+import Image from "next/image"
 
 export default function Login(){
+
     return (
         <div className={styles.main}>
+            <Image className={styles.Image}></Image>
+            
             <div className={styles.divMeio}>
-                <label for="email">Email</label>             
+                <label htmlFor="email">E-mail</label>
                 <input type="email"></input>
-                <label for="email">Password</label>   
+                <label htmlFor="email">Password</label>   
                 <input type="password"></input>
                 <div className={styles.login}>
                 <button className={styles.login1}>Login</button>
