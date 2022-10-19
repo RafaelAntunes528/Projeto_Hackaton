@@ -4,12 +4,41 @@
     display: flex;
     flex-direction: column;
 }
+.banner{
+    background-image: url("../src/components/imagens/Captura_de_ecra_2022-10-19_as_21.01.46.png");
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+}
+.logo{
+    width: 20vw;
+    background-image: url("../src/components/imagens/Logo.png");
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-size: 40vh;
+}
 .graph{
-    background-color: #90d6ff;
+    justify-content: left;
     height: 50vh;
-    width: 100vw;
+    width: 70vw;
     display: flex;
     align-items: baseline;
+}
+.logout{
+    display: flex;
+    width: 10vw;
+    justify-content: right;
+    margin-right: 60px;
+    align-items: flex-end;
+}
+.logout button{ 
+    width: 100px;
+    height: 30px;
+    color: black;
+    background-color: #38b6ff;
+    border: transparent;
 }
 .conduminios{
     background-color: white;

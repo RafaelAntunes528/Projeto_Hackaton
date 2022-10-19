@@ -8,7 +8,7 @@ import Morador from '../src/components/morador'
 export default function Home() {
   return (
     <div className={styles.container}>
-      <HomePage></HomePage>
+      <Login></Login>
     </div>
   )
 }

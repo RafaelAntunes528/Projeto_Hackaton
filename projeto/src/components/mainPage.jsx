@@ -1,7 +1,8 @@
+import { useRouter } from 'next/router'
 import { useState } from 'react'
 import styles from '../../styles/MainPage.module.css'
 import { fazPedido } from '../utils/rest'
-import Cartões from './cartões'
+import Cartoes from './cartoes'
 import { MyResponsivePie } from './graficoPie'
 const resposta = [
     {
@@ -94,23 +95,31 @@ export default function HomePage(){
     //dentro de um useEffect
     // let resposta = fazPedido("/api/", "GET")
 
+    const router = useRouter()
     return(
         <div className={styles.main}>
-            <div className={styles.graph}>
-                <MyResponsivePie data={[
-                {
-                "id": "Pago",
-                "label": "Pago",
-                "value": 2500,
-                "color": "hsl(201, 100%, 61%)"
-                },
-                {
-                "id": "Não Pago",
-                "label": "Npago",
-                "value": 1000,
-                "color": "hsl(249, 68%, 52%)"
-                }
-                ]}/>
+            <div className={styles.banner}>
+                <div className={styles.logo}>
+                </div>
+                <div className={styles.graph}>
+                    <MyResponsivePie data={[
+                    {
+                    "id": "Pago",
+                    "label": "Pago",
+                    "value": 2500,
+                    "color": "hsl(201, 100%, 61%)"
+                    },
+                    {
+                    "id": "Não Pago",
+                    "label": "Npago",
+                    "value": 1000,
+                    "color": "hsl(249, 68%, 52%)"
+                    }
+                    ]}/>
+                </div>
+                <div className={styles.logout}>
+                    <button onClick={()=> router.push("./login")}>Logout</button>
+                </div>
             </div>
 
 
@@ -120,7 +129,7 @@ export default function HomePage(){
             </div>
 
             <div className={styles.conduminios}>
-            {resposta.map(r => <Cartões nome={r.nome} distrito={r.distrito} total={r.total} data={r.data} cor={r.cor}/>)}
+            {resposta.map(r => <Cartoes nome={r.nome} distrito={r.distrito} total={r.total} data={r.data} cor={r.cor}/>)}
             </div>
             
             

@@ -5,7 +5,10 @@
     flex-direction: column;
 }
 .graph{
-    background-color: #90d6ff;
+    background-image: url("../src/components/imagens/Captura_de_ecra_2022-10-19_as_21.01.46.png");
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-size: cover;
     height: 50vh;
     width: 100vw;
     display: flex;
