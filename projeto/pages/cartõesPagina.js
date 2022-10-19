@@ -8,7 +8,7 @@ import styles from '../styles/Home.module.css'
 export default function Home() {
   return (
     <div className={styles.container}>
-      <Cartões nome={"man"} total={"fer"} data={"vvf"}></Cartões>
+      <CartõesPagina></CartõesPagina>
     </div>
   )
 }
