@@ -47,19 +47,19 @@ export default function HomePage(){
 }></MyResponsiveLine> */}
             </div>
             <div className={styles.conduminios}>
-            <Cartões nome={"Rafael"} total={12456} data={"12/05"}></Cartões>
-            <Cartões nome={"man"} total={"12749"} data={"vvf"}></Cartões>
-            <Cartões nome={"man"} total={"6876"} data={"vvf"}></Cartões>
+            <Cartões nome={"Rafael"} total={150} data={"12/05"}></Cartões>
+            <Cartões nome={"Vasco"} total={"12749"} data={"vvf"}></Cartões>
+            <Cartões nome={"Mónica"} total={"6876"} data={"vvf"}></Cartões>
             </div>
             <div className={styles.conduminios}>
-            <Cartões nome={"man"} total={"fer"} data={"vvf"}></Cartões>
-            <Cartões nome={"man"} total={"12749"} data={"vvf"}></Cartões>
-            <Cartões nome={"man"} total={"6876"} data={"vvf"}></Cartões>
+            <Cartões nome={"António"} total={"fer"} data={"vvf"}></Cartões>
+            <Cartões nome={"Rafael"} total={"12749"} data={"vvf"}></Cartões>
+            <Cartões nome={"Vasco"} total={"6876"} data={"vvf"}></Cartões>
             </div>
             <div className={styles.conduminios}>
-            <Cartões nome={"man"} total={"fer"} data={"vvf"}></Cartões>
-            <Cartões nome={"man"} total={"12749"} data={"vvf"}></Cartões>
-            <Cartões nome={"man"} total={"6876"} data={"vvf"}></Cartões>
+            <Cartões nome={"Mónica"} total={"fer"} data={"vvf"}></Cartões>
+            <Cartões nome={"António"} total={"12749"} data={"vvf"}></Cartões>
+            <Cartões nome={"Rafael"} total={"6876"} data={"vvf"}></Cartões>
             </div>
 
         </div>

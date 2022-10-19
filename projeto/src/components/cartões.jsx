@@ -3,17 +3,16 @@ import { useRouter } from "next/router"
 
 export default function Cartões({ nome, total, data }) {
     const router = useRouter()
-    nome = "sjsdcb"
     
+
 
 
     return (
         <div onClick={() => router.push("/cartõesPagina")} className={styles.cartao1}>
-            <h1>Nome:</h1>
-            <p>{nome}</p>
+            <p className={styles.nome}>Nome: {nome}</p>
+            <p className={styles.total}>Total receber: {total}</p>         
+            <p className={styles.data}>Data: {data}</p>
             
-            <p>{total}</p>
-            <p>{data}</p>
         </div>
     )
 }

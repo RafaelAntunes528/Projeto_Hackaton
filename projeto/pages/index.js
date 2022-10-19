@@ -9,11 +9,7 @@ import HomePage from '../src/components/mainPage'
 export default function Home() {
   return (
     <div className={styles.container}>
-<<<<<<< HEAD
-      <Cartões nome={"man"} total={"fer"} data={"vvf"}></Cartões>
-=======
       <HomePage></HomePage>
->>>>>>> 55c0b57d761dff4845c9406155b276b50d6d1272
     </div>
   )
 }
