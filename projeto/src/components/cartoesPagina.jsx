@@ -27,18 +27,22 @@ import Tabela, { MyResponsiveCalendar } from './Tabela'
 
 ] */
 
-export default function CartoesPagina(){
+export default function CartoesPagina(props){
 
     const router = useRouter()
 
-    const getRes = async () => {
-        let resposta = await fazPedido("/api/moradores/", "GET")
-        setState(resposta.body)
-    }
+
 
     useEffect(() => {
+        const getRes = async () => {
+            console.log(props.id)
+            let resposta = await fazPedido(`/api/moradores/${props.id}`, "GET")
+            setState(resposta.body)
+            console.log(resposta)
+            console.log(state)
+        }
         getRes()
-    }, [])
+    }, [props.id])
 
 
     const [searchInput, setSearchInput] = useState("");
@@ -54,6 +58,8 @@ export default function CartoesPagina(){
         return e.estado.match(searchInput);
     });
     }
+
+    console.log(state)
 
     return (
         <div className={styles.main}>
@@ -77,7 +83,7 @@ export default function CartoesPagina(){
                     ]} />
                 </div>
                 <div className={styles.logout}>
-                    <button onClick={() => router.push("./login")}>Logout</button>
+                    <button onClick={() => router.push("/login")}>Logout</button>
                 </div>
             </div>
             <div className={styles.organizar}>
@@ -91,7 +97,7 @@ export default function CartoesPagina(){
             </div>
             <div className={styles.moradores}>
                 <div className={styles.moradores1}>
-                    {state.map(r => <Morador nomeDaPessoa={r.nome} andar={r.casa} isPago={r.estado} />)}
+                    {state.map(r => <Morador key={r._id} nomeDaPessoa={r.nomedapessoa} andar={r.casa} isPago={r.estado} />)}
                 </div>
             </div>
         </div>

@@ -1,4 +1,5 @@
-import { Collection, ObjectId } from "mongodb"
+
+import { ObjectId } from "mongodb"
 // Buscamos a função que faz a conecção com a base de dados
 import { getMongoCollection } from "./mongodb"
 
@@ -28,6 +29,12 @@ async function getMoradores(id) {
     const collection = await getMongoCollection(DB_NAME, MOR);
         return await collection.findOne({ _id: new ObjectId(id)})
 }
+async function getMoradoresByCondominioId(id) {
+    console.log('id', id)
+    if (!ObjectId.isValid(id)) return []
+    const collection = await getMongoCollection(DB_NAME, MOR);
+        return await collection.find({ condominioId: new ObjectId(id)}).toArray()
+}
 async function getAllCondominio() {
         const collection = await getMongoCollection(DB_NAME, CON)
         return await collection.find().toArray()
@@ -45,4 +52,5 @@ export {
     getAllCondominio,
     insertMorador,
     getAllMoradores,
+    getMoradoresByCondominioId
 }
