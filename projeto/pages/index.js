@@ -10,7 +10,7 @@ import PopUpMorador from '../src/components/popUpMorador'
 export default function Home() {
   return (
     <div className={styles.container}>
-     <Morador></Morador>
+     <PopUpMorador/>
     </div>
   )
 }

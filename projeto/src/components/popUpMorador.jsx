@@ -7,23 +7,23 @@ export default function PopUpMorador(){
 
     const router = useRouter()
 
-    const [nome, setName] = useState("")
-    const [distrito, setDistrito] = useState("")
+    const [nome, setNome] = useState("")
+    const [casa, setCasa] = useState("")
     const [estado, setEstado] = useState(false)
 
 
     let info = {
         "nome": nome,
-        "distrito": distrito,
-        "cor": estado 
+        "casa": casa,
+        "estado": estado 
     }
 
-    /*const fim = (async () => {
-        const a = await fazPedido("/api/condominios/", "POST", info)
+    const fim = (async () => {
+        const a = await fazPedido("/api/moradores/", "POST", info)
         console.log(a)
         if (a.status === 200)
             router.push("/mainPage") 
-    }) */
+    })
 
 
     return (
@@ -33,11 +33,11 @@ export default function PopUpMorador(){
                 <div className={styles.popup}>  
                     <form onSubmit={(e) => e.preventDefault(fim())}>
                 <label for="Nome">Nome</label><br/>            
-                <input type="text" value={nome} onChange={(evento) => setName(evento.target.value)}></input><p>
+                <input type="text" value={nome} onChange={(evento) => setNome(evento.target.value)}></input><p>
 
                 </p>
-                <label for="Distrito">Distrito</label><br/>   
-                <input type="text" value={distrito} onChange={(evento) => setDistrito(evento.target.value)}></input><p>
+                <label for="Distrito">Andar</label><br/>   
+                <input type="text" value={casa} onChange={(evento) => setCasa(evento.target.value)}></input><p>
                     
                 </p>
                 <label for="Estado de pagamento">Estado de pagamento</label><br/>   
