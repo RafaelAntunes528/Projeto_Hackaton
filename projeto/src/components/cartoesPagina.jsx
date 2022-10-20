@@ -82,7 +82,7 @@ export default function CartoesPagina(){
             </div>
             <div className={styles.organizar}>
                 <div className={styles.searchContainer}>
-                    <input type="text" name="search" placeholder="Search..." className={styles.searchInput} />
+                <input type="search" placeholder="Search here" onChange={handleChange} value={searchInput} className={styles.searchInput}/>
                 </div>
                 <div className={styles.botaoDiv}>
                     <button className={styles.botao1}>Adicionar</button>
