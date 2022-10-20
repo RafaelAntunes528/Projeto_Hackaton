@@ -7,21 +7,21 @@ const casas = [
     {
         nome: "Teste1",
         distrito: "Sintra",
-        total: 2000,
+        total: 200,
         data: "10/20",
         cor: true,
     },
     {
         nome: "Teste2",
         distrito: "Sintra",
-        total: 2000,
+        total: 300,
         data: "10/20",
         cor: true,
     },
     {
         nome: "Teste3",
         distrito: "Sintra",
-        total: 2000,
+        total: 450,
         data: "10/20",
         cor: true,
     },
@@ -53,6 +53,7 @@ export async function main() {
 
 export async function mainMor() {
     let random = getRandomFromArray(idsDeCondominios)
+
     const moradores = [
        {
             nomedapessoa: "Rafael",
@@ -61,69 +62,33 @@ export async function mainMor() {
            condominioId: random,
         },
        {
-            nomedapessoa: "Rafael",
+            nomedapessoa: "Monica",
+            estado: false,
+            casa: "12",
+           condominioId: random,
+        },
+       {
+            nomedapessoa: "Vasco",
             estado: true,
-            casa: "Rc/D",
+            casa: "8",
            condominioId: random,
         },
        {
-            nomedapessoa: "Rafael",
+            nomedapessoa: "Antonio",
+            estado: false,
+            casa: "1",
+           condominioId: random,
+        },
+       {
+            nomedapessoa: "Maria",
+            estado: false,
+            casa: "4",
+           condominioId: random,
+        },
+       {
+            nomedapessoa: "Cristina",
             estado: true,
-            casa: "Rc/D",
-           condominioId: random,
-        },
-       {
-            nomedapessoa: "Rafael",
-            estado: false,
-            casa: "Rc/D",
-           condominioId: random,
-        },
-       {
-            nomedapessoa: "Rafael",
-            estado: false,
-            casa: "Rc/D",
-           condominioId: random,
-        },
-       {
-            nomedapessoa: "Rafael",
-            estado: false,
-            casa: "Rc/D",
-           condominioId: random,
-        },
-       {
-            nomedapessoa: "Rafael",
-            estado: false,
-            casa: "Rc/D",
-           condominioId: random,
-        },
-       {
-            nomedapessoa: "Rafael",
-            estado: true,
-            casa: "Rc/D",
-           condominioId: random,
-        },
-       {
-            nomedapessoa: "Rafael",
-            estado: true,
-            casa: "Rc/D",
-           condominioId: random,
-        },
-       {
-            nomedapessoa: "Rafael",
-            estado: true,
-            casa: "Rc/D",
-           condominioId: random,
-        },
-       {
-            nomedapessoa: "Rafael",
-            estado: false,
-            casa: "Rc/D",
-           condominioId: random,
-        },
-       {
-            nomedapessoa: "Rafael",
-            estado: false,
-            casa: "Rc/D",
+            casa: "3",
            condominioId: random,
         },
     ]
