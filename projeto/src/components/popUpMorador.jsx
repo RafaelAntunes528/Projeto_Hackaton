@@ -22,7 +22,7 @@ export default function PopUpMorador(){
         const a = await fazPedido("/api/moradores/", "POST", info)
         console.log(a)
         if (a.status === 200)
-            router.push("/mainPage") 
+            router.push("/cartoesPagina") 
     })
 
 

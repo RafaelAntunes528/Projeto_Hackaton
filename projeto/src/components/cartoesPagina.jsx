@@ -91,8 +91,8 @@ export default function CartoesPagina(props){
                 <input type="search" placeholder="Search here" onChange={handleChange} value={searchInput} className={styles.searchInput}/>
                 </div>
                 <div className={styles.botaoDiv}>
-                    <button onClick={() => router.push("./addMorador")} className={styles.botao1}>Adicionar</button>
-                    <button onClick={() => router.push("./popUpNotificar")} className={styles.botao}>Notificar</button>
+                    <button onClick={() => router.push("/addMorador")} className={styles.botao1}>Adicionar</button>
+                    <button onClick={() => router.push("/popUpNotificar")} className={styles.botao}>Notificar</button>
                 </div>
             </div>
             <div className={styles.moradores}>

@@ -19,7 +19,7 @@ export default function Login(){
                 <label htmlFor="email">Password</label>   
                 <input type="password"></input>
                 <div className={styles.login}>
-                <button onClick={() => router.push("./mainPage")} className={styles.login1}>Fazer Login</button>
+                <button onClick={() => router.push("/mainPage")} className={styles.login1}>Fazer Login</button>
                 </div>
 </div>
  </div>

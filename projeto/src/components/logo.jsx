@@ -9,7 +9,7 @@ export default function Logo(){
         <div className={styles.main}>
 
         <div className={styles.logo}></div>
-        <button onClick={() => router.push("./login")} className={styles.botao}>Login</button>
+        <button onClick={() => router.push("/login")} className={styles.botao}>Login</button>
 
     </div>
     </div>

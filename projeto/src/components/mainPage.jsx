@@ -122,7 +122,7 @@ export default function HomePage() {
           />
         </div>
         <div className={styles.logout}>
-          <button onClick={() => router.push("./login")}>Logout</button>
+          <button onClick={() => router.push("/login")}>Logout</button>
         </div>
       </div>
 
@@ -134,7 +134,7 @@ export default function HomePage() {
           value={searchInput}
           className={styles.searchInput}
         />
-        <button onClick={() => router.push("./addConduminio")}>
+        <button onClick={() => router.push("/addConduminio")}>
           Adicionar novo
         </button>
       </div>
