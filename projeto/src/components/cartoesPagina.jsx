@@ -26,56 +26,57 @@ import Tabela, { MyResponsiveCalendar } from './Tabela'
 
 ] */
 
-export default function CartoesPagina(moradores){
+export default function CartoesPagina(moradores) {
 
     const getRes = async () => {
         let resposta = await fazPedido("/api/moradores/", "GET")
         setState(resposta.body)
     }
 
-    useEffect (() => {
+    useEffect(() => {
         getRes()
-     }, []) 
+    }, [])
 
     const [state, setState] = useState(Array)
 
 
-    return(
+    return (
         <div className={styles.main}>
             <div className={styles.banner}>
                 <div className={styles.logo}>
                 </div>
                 <div className={styles.graph}>
                     <MyResponsivePie data={[
-                    {
-                    "id": "Pago",
-                    "label": "Pago",
-                    "value": 2500,
-                    "color": "hsl(201, 100%, 61%)"
-                    },
-                    {
-                    "id": "Não Pago",
-                    "label": "Npago",
-                    "value": 1000,
-                    "color": "hsl(249, 68%, 52%)"
-                    }
-                    ]}/>
+                        {
+                            "id": "Pago",
+                            "label": "Pago",
+                            "value": 2500,
+                            "color": "hsl(201, 100%, 61%)"
+                        },
+                        {
+                            "id": "Não Pago",
+                            "label": "Npago",
+                            "value": 1000,
+                            "color": "hsl(249, 68%, 52%)"
+                        }
+                    ]} />
                 </div>
                 <div className={styles.logout}>
-                    <button onClick={()=> router.push("./login")}>Logout</button>
+                    <button onClick={() => router.push("./login")}>Logout</button>
                 </div>
             </div>
             <div className={styles.organizar}>
-            <div className={styles.searchContainer}>
-                <input type="text" name="search" placeholder="Search..." className={styles.searchInput}/>
-            </div>
-            <div className={styles.botaoDiv}>
-            <button className={styles.botao}>Notificar</button>
-            </div>
+                <div className={styles.searchContainer}>
+                    <input type="text" name="search" placeholder="Search..." className={styles.searchInput} />
+                </div>
+                <div className={styles.botaoDiv}>
+                    <button className={styles.botao1}>Adicionar</button>
+                    <button className={styles.botao}>Notificar</button>
+                </div>
             </div>
             <div className={styles.moradores}>
                 <div className={styles.moradores1}>
-                {state.map(r => <Morador nomeDaPessoa={r.nome} andar={r.casa} isPago={r.estado}/>)}
+                    {state.map(r => <Morador nomeDaPessoa={r.nome} andar={r.casa} isPago={r.estado} />)}
                 </div>
             </div>
         </div>
