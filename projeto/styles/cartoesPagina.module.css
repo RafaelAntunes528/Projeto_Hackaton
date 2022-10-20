@@ -56,35 +56,51 @@
 }
 .moradores{
     background-color: rgb(255, 255, 255);
-    width: 99vw;
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
+
 }
-.moradores1{ 
-    margin-top: 30px;
-    margin-right: 17px;
+.moradores1{
+    margin-top: 3vh;
+    background-color: aqua;
+    width: 95vw;
+    height: 10vh;
 
 }
 .organizar{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: flex-end;
 }
 
-.botao {
-    border-radius: 10px;
-    border: transparent;
-    cursor: pointer;
-    width: 13vw;
-    height: 5vh;
-    font-size: 10px;
-}
+
 .botaoDiv{
     width: 50vw;
-    height: 6vh;
-    background-color: aquamarine;
+    height: 4vh;
+    background-color: rgb(255, 255, 255);
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+}
+.botao {
+    background-color: #b62e47;
+    border: transparent;
+    cursor: pointer;
+    width: 11vw;
+    height: 3vh;
+    font-size: 13px;
+    color: white;
+}
+.botao1 {
+    background-color: #90d6ff;
+    border: transparent;
+    cursor: pointer;
+    width: 11vw;
+    height: 3vh;
+    font-size: 13px;
+    color: white;
 }
