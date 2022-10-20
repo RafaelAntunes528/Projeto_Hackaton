@@ -86,10 +86,19 @@ export default function HomePage(){
        getRes()
     }, []) 
 
-    
+    const [searchInput, setSearchInput] = useState("");
     const [state, setState] = useState(Array)
 
-    console.log(state)
+    const handleChange = (e) => {
+        e.preventDefault();
+        setSearchInput(e.target.value);
+    };
+
+    if (searchInput.length > 0) {
+        state.filter((e) => {
+        return e.distrito.match(searchInput);
+    });
+    }
 
       
     const router = useRouter()
@@ -121,7 +130,7 @@ export default function HomePage(){
 
 
             <div className={styles.searchContainer}>
-                <input type="text" name="search" placeholder="Search..." className={styles.searchInput}/>
+                <input type="search" placeholder="Search here" onChange={handleChange} value={searchInput} className={styles.searchInput}/>
                 <button onClick={() => router.push("./addConduminio")}>Adicionar novo</button>
             </div>
 

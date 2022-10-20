@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import styles from '../../styles/cartoesPagina.module.css'
 import { fazPedido } from '../utils/rest'
@@ -26,7 +27,9 @@ import Tabela, { MyResponsiveCalendar } from './Tabela'
 
 ] */
 
-export default function CartoesPagina(moradores){
+export default function CartoesPagina(){
+
+    const router = useRouter()
 
     const getRes = async () => {
         let resposta = await fazPedido("/api/moradores/", "GET")
@@ -37,8 +40,20 @@ export default function CartoesPagina(moradores){
         getRes()
      }, []) 
 
+
+    const [searchInput, setSearchInput] = useState("");
     const [state, setState] = useState(Array)
 
+    const handleChange = (e) => {
+        e.preventDefault();
+        setSearchInput(e.target.value);
+    };
+
+    if (searchInput.length > 0) {
+        state.filter((e) => {
+        return e.estado.match(searchInput);
+    });
+    }
 
     return(
         <div className={styles.main}>
@@ -67,7 +82,7 @@ export default function CartoesPagina(moradores){
             </div>
             <div className={styles.organizar}>
             <div className={styles.searchContainer}>
-                <input type="text" name="search" placeholder="Search..." className={styles.searchInput}/>
+            <input type="search" placeholder="Search here" onChange={handleChange} value={searchInput} className={styles.searchInput}/>
             </div>
             <div className={styles.botaoDiv}>
             <button className={styles.botao}>Notificar</button>
