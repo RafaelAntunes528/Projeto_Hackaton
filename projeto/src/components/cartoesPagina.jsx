@@ -5,6 +5,7 @@ import Cartoes from './cartoes'
 import { MyResponsivePie } from './graficoPie'
 import Morador from './morador'
 import Tabela, { MyResponsiveCalendar } from './Tabela'
+import { useRouter } from "next/router"
 
 
 /* const resposta=[
@@ -27,6 +28,8 @@ import Tabela, { MyResponsiveCalendar } from './Tabela'
 ] */
 
 export default function CartoesPagina(moradores) {
+
+    const router = useRouter()
 
     const getRes = async () => {
         let resposta = await fazPedido("/api/moradores/", "GET")
@@ -70,8 +73,8 @@ export default function CartoesPagina(moradores) {
                     <input type="text" name="search" placeholder="Search..." className={styles.searchInput} />
                 </div>
                 <div className={styles.botaoDiv}>
-                    <button className={styles.botao1}>Adicionar</button>
-                    <button className={styles.botao}>Notificar</button>
+                    <button onClick={() => router.push("./addMorador")} className={styles.botao1}>Adicionar</button>
+                    <button onClick={() => router.push("./popUpNotificar")} className={styles.botao}>Notificar</button>
                 </div>
             </div>
             <div className={styles.moradores}>

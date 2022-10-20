@@ -2,21 +2,40 @@
     height: 100vh;
     width: 100vw;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    background-color:goldenrod;
+    background-color: white;
     justify-content: center;
+}
+.logo {
+    background-color: white;
+    height: 35vh;
+    width: 24vw;
+    background-image: url("../src/components/imagens/Logo.png");
+    background-size: cover;
+    
 }
 
 
 .popup {
     width: 20vw;
     height: 55vh;
-    background-color: #ffffff;
+    background-color: #90d6ff;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #333333;
     text-align: left;
+    box-shadow: 5px 5px 5px #3c3f57;
+
+}
+.login {
+    
+    width: 12vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.login1{
+    cursor: pointer;
 }
