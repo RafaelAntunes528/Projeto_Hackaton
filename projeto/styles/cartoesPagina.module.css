@@ -44,3 +44,25 @@
     height: 10vh;
 
 }
+.organizar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.botao {
+    border-radius: 10px;
+    border: transparent;
+    cursor: pointer;
+    width: 13vw;
+    height: 5vh;
+    font-size: 10px;
+}
+.botaoDiv{
+    width: 50vw;
+    height: 6vh;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

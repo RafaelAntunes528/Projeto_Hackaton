@@ -12,10 +12,10 @@
     box-shadow: 50px;
     border: thick double #38b6ff;
     box-shadow: 5px 5px 5px black;
-    
-    
-
 }
+/* /* .caixaMain:hover{
+    background-color: white; 
+} */
 .nomes{
     background-color: #3c3f57;
     width: 100vw;
@@ -32,4 +32,13 @@
     background-position: flex-start;
     background-size: 20vh;
     height: 15vh;
+}
+.mudaCor{
+    background-color: rgb(255, 255, 255);
+    height: 10vh;
+    width: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
 }

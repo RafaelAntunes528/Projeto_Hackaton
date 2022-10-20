@@ -43,8 +43,13 @@ export default function CartoesPagina(moradores){
                 }
                 ]}></MyResponsivePie>
             </div>
+            <div className={styles.organizar}>
             <div className={styles.searchContainer}>
                 <input type="text" name="search" placeholder="Search..." className={styles.searchInput}/>
+            </div>
+            <div className={styles.botaoDiv}>
+            <button className={styles.botao}>Notificar</button>
+            </div>
             </div>
             <div className={styles.moradores}>
                 <div className={styles.moradores1}>
