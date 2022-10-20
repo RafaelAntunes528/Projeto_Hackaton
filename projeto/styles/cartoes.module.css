@@ -1,5 +1,6 @@
-
-.cartao1{
+.cartao1 {
+   
+    border-radius: 6px;
     cursor: pointer;
     background-color: #3c3f57;
     width: 15vw;
@@ -10,22 +11,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
+    
 
 }
-.info{
+
+.info {
     display: flex;
     flex-direction: row;
 }
-.nome{
-   color: white; 
 
+.nome {
+    color: rgb(255, 255, 255);
 }
-.total{
-    color: white;
-
-}
-.data{
-    color: white;
-
-}
-

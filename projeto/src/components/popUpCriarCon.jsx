@@ -32,6 +32,9 @@ export default function PopUpCriarCon(){
 
     return (
         <div className={styles.main}>
+            <div className={styles.logo}>
+
+            </div>
             <div className={styles.popupshadow}>
                 
                 <div className={styles.popup}>  
@@ -57,6 +60,7 @@ export default function PopUpCriarCon(){
 
                 </p>
                 <div className={styles.login}>
+                    <button type={"cancelar"} className={styles.login1}>Cancelar</button>
                 <button type={"submit"} className={styles.login1}>Confirmar</button>
                     
                 </div>
