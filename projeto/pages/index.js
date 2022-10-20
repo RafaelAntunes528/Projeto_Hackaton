@@ -6,11 +6,12 @@ import HomePage from '../src/components/mainPage'
 import PopUpCriarCon from '../src/components/popUpCriarCon'
 import Morador from '../src/components/morador'
 import PopUpMorador from '../src/components/popUpMorador'
+import Logo from '../src/components/logo'
 
 export default function Home() {
   return (
     <div className={styles.container}>
-     <PopUpCriarCon></PopUpCriarCon>
+     <Logo></Logo>
     </div>
   )
 }

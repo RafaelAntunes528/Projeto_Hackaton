@@ -1,0 +1,29 @@
+.main {
+    background-color: rgb(255, 255, 255);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.logo {
+    background-color: rgb(255, 255, 255);
+    height: 35vh;
+    width: 24vw;
+    background-image: url("../src/components/imagens/Logo.png");
+    background-size: cover;
+}
+
+.botao{
+    color: #90d6ff;
+    background-color: #3c3f57;
+    cursor: pointer;
+    width: 15vw;
+    height: 5vh;
+    border: transparent;
+    font-size: 15px;
+}

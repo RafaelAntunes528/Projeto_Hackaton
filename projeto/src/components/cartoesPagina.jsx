@@ -6,7 +6,7 @@ import Cartoes from './cartoes'
 import { MyResponsivePie } from './graficoPie'
 import Morador from './morador'
 import Tabela, { MyResponsiveCalendar } from './Tabela'
-import { useRouter } from "next/router"
+
 
 
 /* const resposta=[
@@ -32,7 +32,7 @@ export default function CartoesPagina(){
 
     const router = useRouter()
 
-    const router = useRouter()
+    
 
     const getRes = async () => {
         let resposta = await fazPedido("/api/moradores/", "GET")
