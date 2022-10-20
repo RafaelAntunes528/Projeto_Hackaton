@@ -42,21 +42,28 @@ export default function CartoesPagina(moradores){
 
     return(
         <div className={styles.main}>
-            <div className={styles.graph}>
-                <MyResponsivePie data={[
-                {
-                "id": "Pago",
-                "label": "Pago",
-                "value": 2500,
-                "color": "hsl(201, 100%, 61%)"
-                },
-                {
-                "id": "Não Pago",
-                "label": "Npago",
-                "value": 1000,
-                "color": "hsl(249, 68%, 52%)"
-                }
-                ]}></MyResponsivePie>
+            <div className={styles.banner}>
+                <div className={styles.logo}>
+                </div>
+                <div className={styles.graph}>
+                    <MyResponsivePie data={[
+                    {
+                    "id": "Pago",
+                    "label": "Pago",
+                    "value": 2500,
+                    "color": "hsl(201, 100%, 61%)"
+                    },
+                    {
+                    "id": "Não Pago",
+                    "label": "Npago",
+                    "value": 1000,
+                    "color": "hsl(249, 68%, 52%)"
+                    }
+                    ]}/>
+                </div>
+                <div className={styles.logout}>
+                    <button onClick={()=> router.push("./login")}>Logout</button>
+                </div>
             </div>
             <div className={styles.organizar}>
             <div className={styles.searchContainer}>
