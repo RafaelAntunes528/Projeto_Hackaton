@@ -1,11 +1,13 @@
+import { useEffect, useState } from 'react'
 import styles from '../../styles/cartoesPagina.module.css'
+import { fazPedido } from '../utils/rest'
 import Cartoes from './cartoes'
 import { MyResponsivePie } from './graficoPie'
 import Morador from './morador'
 import Tabela, { MyResponsiveCalendar } from './Tabela'
 
 
-const resposta=[
+/* const resposta=[
     {
         nome: "Rafael",
         casa: "RC/D",
@@ -22,9 +24,22 @@ const resposta=[
         estado: true,
     },
 
-]
+] */
 
 export default function CartoesPagina(moradores){
+
+    const getRes = async () => {
+        let resposta = await fazPedido("/api/moradores/", "GET")
+        setState(resposta.body)
+    }
+
+    useEffect (() => {
+        getRes()
+     }, []) 
+
+    const [state, setState] = useState(Array)
+
+
     return(
         <div className={styles.main}>
             <div className={styles.graph}>
@@ -53,7 +68,7 @@ export default function CartoesPagina(moradores){
             </div>
             <div className={styles.moradores}>
                 <div className={styles.moradores1}>
-                {resposta.map(r => <Morador nomeDaPessoa={r.nome} andar={r.casa} isPago={r.estado}/>)}
+                {state.map(r => <Morador nomeDaPessoa={r.nome} andar={r.casa} isPago={r.estado}/>)}
                 </div>
             </div>
         </div>

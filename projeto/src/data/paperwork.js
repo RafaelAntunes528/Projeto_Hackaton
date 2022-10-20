@@ -15,6 +15,11 @@ async function insertCondominio(op) {
     const result = await collection.insertOne(op)
     return result.insertedId
 }
+async function insertMorador(op) {
+    const collection = await getMongoCollection(DB_NAME, MOR)
+    const result = await collection.insertOne(op)
+    return result.insertedId
+}
 async function getCondominio(id) {
     const collection = await getMongoCollection(DB_NAME, CON);
         return await collection.findOne({ _id: new ObjectId(id)})
@@ -27,6 +32,10 @@ async function getAllCondominio() {
         const collection = await getMongoCollection(DB_NAME, CON)
         return await collection.find().toArray()
 }
+async function getAllMoradores() {
+        const collection = await getMongoCollection(DB_NAME, MOR)
+        return await collection.find().toArray()
+}
 
 // Exportamos as duas funções criadas acima
 export {
@@ -34,4 +43,6 @@ export {
     getCondominio,
     getMoradores,
     getAllCondominio,
+    insertMorador,
+    getAllMoradores,
 }
